@@ -1,33 +1,35 @@
 /* Tailwind import MUST be first */
 @import "tailwindcss";
 
-/* ================= BRAND THEME (Eco Yachts) ================= */
+/* ================= BRAND THEME (Roofing — Navy / Orange) ================= */
 @theme {
-  --color-brand-50: #eaf5f3;
-  --color-brand-100: #d3ebe6;
-  --color-brand-200: #a8d8cd;
-  --color-brand-300: #7cc2b2;
-  --color-brand-400: #4ca997;
-  --color-brand-500: #2e8b7a;
-  --color-brand-600: #1f6f63;
-  --color-brand-700: #175b51;
-  --color-brand-800: #123f39;
-  --color-brand-900: #0b2622;
+  --color-brand-50: #eef2f7;
+  --color-brand-100: #dde5ef;
+  --color-brand-200: #b3c3d9;
+  --color-brand-300: #8098bc;
+  --color-brand-400: #4d6a94;
+  --color-brand-500: #2c4a72;
+  --color-brand-600: #ff6b1a;
+  --color-brand-700: #14213b;
+  --color-brand-800: #0e1830;
+  --color-brand-900: #0a1225;
 
-  --color-gold-400: #e3b75c;
-  --color-gold-500: #d2a046;
-  --color-gold-600: #b98530;
+  --color-gold-400: #ffb454;
+  --color-gold-500: #ff9d2e;
+  --color-gold-600: #e07f16;
 
   --font-script: var(--font-caveat), cursive;
+  --font-heading: var(--font-poppins), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* ================= ROOT THEME ================= */
 :root {
   --background: #ffffff;
-  --foreground: #0b2622;
+  --foreground: #0a1225;
   --border-color: #333;
   --border-color-hover: #444;
-  --primary: #1f6f63;
+  --primary: #14213b;
 
   --card-gradient: linear-gradient(
     0deg,
@@ -38,9 +40,15 @@
 }
 
 /* ================= BASE STYLES ================= */
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* ================= LAYERS ================= */

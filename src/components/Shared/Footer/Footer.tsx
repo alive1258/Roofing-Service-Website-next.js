@@ -11,36 +11,36 @@ import {
 import Logo from "../Logo/Logo";
 
 /* ================= CONSTANTS ================= */
-// TODO: replace with the charter company's real contact details — same
-// placeholders used in Navbar / NewsletterSection.
-const CONTACT_PHONE = "+1 (202) 555-0198";
-const CONTACT_EMAIL = "hello@ecoyachts.com";
-const OFFICE_ADDRESS = "14 Marina Boulevard, Athens, Greece";
+// TODO: replace with the roofing company's real contact details — same
+// placeholders used in Navbar.
+const CONTACT_PHONE = "+1 (800) 555-0148";
+const CONTACT_EMAIL = "info@ironcladroofing.com";
+const OFFICE_ADDRESS = "1275 Roofing Lane, Dallas, TX 75201";
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Yachts", href: "/yachts" },
-  { label: "Destinations", href: "/destinations" },
+  { label: "Services", href: "/services" },
+  { label: "Repair & Replacement", href: "/roof-repair-replacement" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
 const COMPANY_LINKS = [
-  { label: "About Us", href: "/about" },
-  { label: "Sustainability", href: "/about/sustainability" },
-  { label: "Join the Team", href: "/about/careers" },
-  { label: "News & Events", href: "/about/news/latest" },
-  { label: "Crew Services", href: "/crew-services" },
+  { label: "Roof Installation", href: "/services" },
+  { label: "Roof Repair", href: "/roof-repair-replacement" },
+  { label: "Roof Replacement", href: "/roof-repair-replacement" },
+  { label: "Storm Damage Repair", href: "/roof-repair-replacement" },
+  { label: "Commercial Roofing", href: "/services" },
 ];
 
 const SUPPORT_LINKS = [
-  { label: "Experiences", href: "/#experiences" },
-  { label: "Sailing Insights", href: "/blog" },
+  { label: "Free Estimate", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms & Conditions", href: "/terms-conditions" },
   { label: "Refund Policy", href: "/refund-policy" },
 ];
 
-// TODO: swap in the charter company's real social profile URLs
+// TODO: swap in the roofing company's real social profile URLs
 const SOCIAL_LINKS = [
   { icon: FaFacebookF, label: "Facebook", href: "#" },
   { icon: FaInstagram, label: "Instagram", href: "#" },
@@ -49,8 +49,8 @@ const SOCIAL_LINKS = [
 ];
 
 const CERTIFICATIONS = [
-  { icon: Leaf, label: "Eco Certified Fleet" },
-  { icon: ShieldCheck, label: "Verified & Insured" },
+  { icon: ShieldCheck, label: "Licensed & Insured" },
+  { icon: Leaf, label: "Workmanship Warranty" },
 ];
 
 /* ================= COMPONENT ================= */
@@ -72,9 +72,9 @@ const Footer = () => {
                 <Logo variant="light" size="lg" />
               </Link>
               <p className="mt-4 text-brand-100/70 text-sm max-w-sm leading-relaxed">
-                Eco-certified yacht charters for travelers who care about
-                where they go and how they get there. Luxury that gives back
-                to the seas it sails.
+                Licensed and insured roofing contractors delivering
+                dependable installation, repair, and replacement for homes
+                and businesses — built to protect what matters most.
               </p>
             </div>
 
@@ -127,7 +127,7 @@ const Footer = () => {
 
             <div className="space-y-5">
               <h3 className="text-sm font-bold uppercase tracking-widest text-white">
-                Company
+                Services
               </h3>
               <ul className="space-y-3">
                 {COMPANY_LINKS.map((link) => (
@@ -196,7 +196,7 @@ const Footer = () => {
         {/* BOTTOM BAR */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs text-brand-100/60 text-center md:text-left">
-            © {currentYear} <span className="text-gold-400">Eco Yachts</span>.
+            © {currentYear} <span className="text-gold-400">Ironclad Roofing</span>.
             All rights reserved.
           </p>
 

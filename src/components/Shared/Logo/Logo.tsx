@@ -1,8 +1,7 @@
 /* ================= LOGO MARK (SVG) ================= */
-/* A leaf-in-wave glyph inside a solid circle — evokes sustainability +
-   sailing without needing an external asset. Reused as-is on both light
-   (Navbar) and dark (Footer) backgrounds since the circle carries its own
-   brand fill. */
+/* A house-with-shield glyph — evokes protection + roofing without needing
+   an external asset. Reused as-is on both light (Navbar) and dark (Footer)
+   backgrounds since the circle carries its own brand fill. */
 export const LogoMark = ({ className = "w-9 h-9" }: { className?: string }) => (
   <svg
     viewBox="0 0 40 40"
@@ -11,17 +10,10 @@ export const LogoMark = ({ className = "w-9 h-9" }: { className?: string }) => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    <circle cx="20" cy="20" r="20" fill="#1F6F63" />
-    <path
-      d="M13 24c2-6 7-9 13-9-1 6-4 11-10 12.5-1.7.4-3.4-1.4-3-3.5Z"
-      fill="#EAF5F3"
-    />
-    <path
-      d="M9 27c5.5 1.5 11 1.5 16.5-2"
-      stroke="#EAF5F3"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
+    <circle cx="20" cy="20" r="20" fill="#14213B" />
+    <path d="M10 21.5 20 12l10 9.5" stroke="#FF9D2E" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M13 19.5V28h14v-8.5" stroke="#EEF2F7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M17 28v-5h6v5" stroke="#FF9D2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -45,16 +37,12 @@ const Logo = ({ variant = "dark", size = "md", className = "" }: LogoProps) => {
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <LogoMark className={icon} />
       <span
-        className={`relative font-bold leading-none whitespace-nowrap tracking-tight ${text} ${
+        className={`font-heading font-bold leading-none whitespace-nowrap tracking-tight ${text} ${
           variant === "dark" ? "text-brand-900" : "text-white"
         }`}
       >
-        eco
-        <span
-          className={`absolute -right-2 -top-1 h-1.5 w-1.5 rounded-full ${
-            variant === "dark" ? "bg-gold-500" : "bg-gold-400"
-          }`}
-        />
+        Ironclad
+        <span className={variant === "dark" ? "text-brand-600" : "text-gold-400"}> Roofing</span>
       </span>
     </span>
   );
