@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
               href="/contact"
               className="bg-gold-500 text-brand-900 px-3.5 py-1 rounded-full text-xs font-semibold hover:bg-gold-400 transition"
             >
-              Book Now
+              Get a Free Estimate
             </Link>
           </div>
         </div>
@@ -182,23 +182,18 @@ const Navbar: React.FC = () => {
             </nav>
 
             <div className="hidden lg:flex items-center gap-4">
-              {user && (
-                <Link
-                  href="/my-bookings"
-                  className={`text-sm font-medium transition ${
-                    pathname.startsWith("/my-bookings")
-                      ? "text-brand-600"
-                      : "text-brand-900 hover:text-brand-600"
-                  }`}
-                >
-                  My Booking
-                </Link>
-              )}
+              <a
+                href={`tel:${CONTACT_PHONE.replace(/[^+\d]/g, "")}`}
+                className="flex items-center gap-2 text-sm font-semibold text-brand-900 hover:text-brand-600 transition"
+              >
+                <Phone size={16} className="text-brand-600" />
+                {CONTACT_PHONE}
+              </a>
               <Link
-                href="/yachts"
+                href="/contact"
                 className="bg-brand-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-700 transition"
               >
-                Explore Yachts
+                Get a Free Estimate
               </Link>
             </div>
           </div>

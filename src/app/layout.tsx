@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Caveat } from "next/font/google";
+import { Geist, Geist_Mono, Caveat, Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/src/lib/providers/Providers";
 import ToastProvider from "../components/Common/ToastProvider/ToastProvider";
@@ -26,48 +26,63 @@ const caveat = Caveat({
   display: "swap",
 });
 
+// Roofing site type system: Poppins for headings, Inter for body copy.
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 // ✅ SEO Metadata
 // NOTE: metadataBase/canonical use a placeholder domain — swap in the
 // real domain once one is registered/deployed.
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ecoyachts.com"),
+  metadataBase: new URL("https://ironcladroofing.com"),
 
   title: {
-    default: "Eco Yachts | Sustainable Yachts. Extraordinary Journeys.",
-    template: "%s | Eco Yachts",
+    default: "Ironclad Roofing | Reliable Roofing. Built to Protect What Matters Most.",
+    template: "%s | Ironclad Roofing",
   },
 
   description:
-    "Charter eco-certified luxury yachts and sail the world responsibly. Curated journeys, sustainable travel, and unforgettable experiences on the water.",
+    "Professional roof installation, repair, replacement, and maintenance for homes and businesses. Licensed, insured, and trusted for 15+ years.",
 
   keywords: [
-    "Eco Yachts",
-    "sustainable yacht charter",
-    "luxury yacht rental",
-    "eco-friendly yacht travel",
-    "yacht booking",
-    "responsible luxury travel",
+    "Ironclad Roofing",
+    "roof repair",
+    "roof replacement",
+    "roof installation",
+    "storm damage repair",
+    "commercial roofing",
+    "roofing contractor",
   ],
 
-  authors: [{ name: "Eco Yachts" }],
-  creator: "Eco Yachts",
-  publisher: "Eco Yachts",
+  authors: [{ name: "Ironclad Roofing" }],
+  creator: "Ironclad Roofing",
+  publisher: "Ironclad Roofing",
 
-  category: "travel",
+  category: "home services",
 
   // ✅ Open Graph (Facebook, LinkedIn)
   openGraph: {
-    title: "Eco Yachts | Sustainable Yachts. Extraordinary Journeys.",
+    title: "Ironclad Roofing | Reliable Roofing. Built to Protect What Matters Most.",
     description:
-      "Charter eco-certified luxury yachts and sail the world responsibly.",
-    url: "https://ecoyachts.com",
-    siteName: "Eco Yachts",
+      "Professional roof installation, repair, replacement, and maintenance for homes and businesses.",
+    url: "https://ironcladroofing.com",
+    siteName: "Ironclad Roofing",
     images: [
       {
-        url: "/images/hero-bg.jpg",
+        url: "/images/roofing/hero-roofer.jpg",
         width: 1600,
-        height: 1000,
-        alt: "Eco Yachts — sustainable luxury yacht at sea",
+        height: 1067,
+        alt: "Ironclad Roofing — professional roofers installing shingles",
       },
     ],
     locale: "en_US",
@@ -77,10 +92,10 @@ export const metadata: Metadata = {
   // ✅ Twitter SEO
   twitter: {
     card: "summary_large_image",
-    title: "Eco Yachts | Sustainable Yachts. Extraordinary Journeys.",
+    title: "Ironclad Roofing | Reliable Roofing. Built to Protect What Matters Most.",
     description:
-      "Charter eco-certified luxury yachts and sail the world responsibly.",
-    images: ["/images/hero-bg.jpg"],
+      "Professional roof installation, repair, replacement, and maintenance for homes and businesses.",
+    images: ["/images/roofing/hero-roofer.jpg"],
   },
 
   // ✅ Robots
@@ -99,7 +114,7 @@ export const metadata: Metadata = {
 
   // ✅ Canonical
   alternates: {
-    canonical: "https://ecoyachts.com",
+    canonical: "https://ironcladroofing.com",
   },
 
   // ✅ Icons
@@ -113,7 +128,7 @@ export const metadata: Metadata = {
   },
 
   // ✅ App Info
-  applicationName: "Eco Yachts",
+  applicationName: "Ironclad Roofing",
   referrer: "origin-when-cross-origin",
 
   // ✅ Format detection
@@ -132,7 +147,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} font-sans antialiased bg-white text-brand-900`}
+        className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} ${poppins.variable} ${inter.variable} font-sans antialiased bg-white text-brand-900`}
       >
         <Providers>
           {children}

@@ -123,7 +123,7 @@ const MobileMenuSheet = ({
               onClick={onClose}
               className="block w-full text-center bg-gold-500 text-brand-900 py-2 rounded-lg mt-2 font-semibold hover:bg-gold-400 transition"
             >
-              Book Now
+              Get a Free Estimate
             </Link>
           </div>
         </div>

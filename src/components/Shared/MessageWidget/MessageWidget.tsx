@@ -68,7 +68,7 @@ const MessageWidget = ({
     <>
       {/* PANEL */}
       <div
-        className={`fixed bottom-24 right-4 z-90 flex w-[calc(100vw-2rem)] max-w-sm origin-bottom-right flex-col overflow-hidden rounded-2xl bg-white shadow-2xl transition duration-200 sm:right-6 ${
+        className={`fixed bottom-24 right-4 z-90 flex w-[calc(100%-2rem)] max-w-sm origin-bottom-right flex-col overflow-hidden rounded-2xl bg-white shadow-2xl transition duration-200 sm:right-6 ${
           isOpen
             ? "visible scale-100 opacity-100"
             : "invisible scale-95 opacity-0"
